@@ -1,0 +1,35 @@
+<form [formGroup]="filterForm" (ngSubmit)="onFilter()">
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" formControlName="lastName" type="text">
+    
+    <label for="age">Age:</label>
+    <input id="age" formControlName="age" type="number">
+    
+    <label for="sortBy">Sort By:</label>
+    <select id="sortBy" formControlName="sortBy">
+      <option value="Name">Name</option>
+      <option value="Age">Age</option>
+    </select>
+    
+    <button type="submit">Filter</button>
+  </form>
+  
+  <table *ngIf="players.length > 0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of players">
+        <td>{{ player.firstName }} {{ player.lastName }}</td>
+        <td>{{ player.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div *ngIf="players.length === 0">
+    No players found.
+  </div>
+  
