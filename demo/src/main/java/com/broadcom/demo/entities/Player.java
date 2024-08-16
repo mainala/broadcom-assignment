@@ -6,16 +6,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="players")
+@Table(name="playersinfo")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Player {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long ID;
-    private String Name;
-    private int Age;
-    private String Address1;
-    private String Address2;
+    private long id;
+    @Column
+    private String firstName;
+    private String lastName;
+    private int age;
+    private String address1;
+    private String address2;
 }
+

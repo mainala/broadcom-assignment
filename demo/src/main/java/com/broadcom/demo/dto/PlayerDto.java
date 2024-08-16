@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PlayerDto {
-    private long ID;
-    private String FirstName;
-    private String LastName;
-    private int Age;
-    private String Address1;
-    private String Address2;
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private String address1;
+    private String address2;
 }
